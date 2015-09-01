@@ -7,6 +7,8 @@ var app = express()
 var html5base = '<html>\n  <head>\n    <title></title>\n  </head>\n  <body>'
 var html5close = '  </body>\n</html>'
 
+app.use(express.static('uploads'))
+
 app.get('/', function (req, res) {
   //  TODO: List files
   var files = fs.readdirSync('uploads/')
