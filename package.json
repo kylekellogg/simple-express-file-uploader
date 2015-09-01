@@ -1,0 +1,16 @@
+{
+  "name": "simple-upload-server",
+  "version": "0.0.1",
+  "description": "simple upload server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle Kellogg",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "multer": "^1.0.3"
+  }
+}
