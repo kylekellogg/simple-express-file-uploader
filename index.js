@@ -12,7 +12,10 @@ app.use(express.static('uploads'))
 app.get('/', function (req, res) {
   //  TODO: List files
   var files = fs.readdirSync('uploads/')
-  res.send(html5base + JSON.stringify(files) + html5close)
+  var fileList = files.map(function (file) {
+    return '<li><a href="/' + file + '" target="_blank">' + file + '</a></li>';
+  })
+  res.send(html5base + '<ul>' + fileList.join('') + '</ul>' + html5close)
 })
 
 app.post('/upload', upload.single('file'), function (req, res) {
